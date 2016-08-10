@@ -4,6 +4,7 @@ using System.Collections;
 public class Debris : MonoBehaviour {
     bool isConnected = false;
 
+    // TODO: 어떻게 데브리와 플레이어를 결합시킬 것인가? (fixed joint는 연산도 많고 버그도 많음..)
     void OnCollisionEnter(Collision collision)
     {
         if (!isConnected && collision.gameObject.CompareTag("Player"))
